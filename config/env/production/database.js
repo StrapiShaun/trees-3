@@ -1,4 +1,4 @@
-module.exports = ({ env }) => ({
+/*module.exports = ({ env }) => ({
     connection: {
       client: 'postgres',
       connection: {
@@ -13,9 +13,9 @@ module.exports = ({ env }) => ({
       },
       debug: false,
     },
-  });
+  });*/
 
- /* const parse = require('pg-connection-string').parse;
+ const parse = require('pg-connection-string').parse;
   const config = parse(process.env.DATABASE_URL);
   
   module.exports = () => ({
@@ -28,7 +28,7 @@ module.exports = ({ env }) => ({
         },
       },
     },
-  });*/
+  });
 
 /*  const parse = require('pg-connection-string').parse;
 const config = parse(process.env.DATABASE_URL);
