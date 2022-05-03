@@ -1,4 +1,4 @@
-/*module.exports = ({ env }) => ({
+module.exports = ({ env }) => ({
     connection: {
       client: 'postgres',
       connection: {
@@ -13,7 +13,7 @@
       },
       debug: false,
     },
-  });*/
+  });
 
  /* const parse = require('pg-connection-string').parse;
   const config = parse(process.env.DATABASE_URL);
@@ -30,7 +30,7 @@
     },
   });*/
 
-  const parse = require('pg-connection-string').parse;
+/*  const parse = require('pg-connection-string').parse;
 const config = parse(process.env.DATABASE_URL);
 
 module.exports = () => ({
@@ -47,4 +47,4 @@ module.exports = () => ({
       },
     },
   },
-});
+}); */
