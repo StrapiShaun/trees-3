@@ -15,17 +15,17 @@
     },
   });*/
 
-import { parse } from 'pg-connection-string';
-const config = parse(process.env.DATABASE_URL);
-
-export default () => ({
-  connection: {
-    client: 'postgres',
+  const parse = require('pg-connection-string').parse;
+  const config = parse(process.env.DATABASE_URL);
+  
+  module.exports = () => ({
     connection: {
-      ...config,
-      ssl: {
-        rejectUnauthorized: false,
+      client: 'postgres',
+      connection: {
+        ...config,
+        ssl: {
+          rejectUnauthorized: false,
+        },
       },
     },
-  },
-});
+  });
