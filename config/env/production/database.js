@@ -1,4 +1,4 @@
-/*module.exports = ({ env }) => ({
+module.exports = ({ env }) => ({
     connection: {
       client: 'postgres',
       connection: {
@@ -8,14 +8,14 @@
         user: env('DATABASE_USERNAME'), 
         password: env('DATABASE_PASSWORD'),
         ssl: {
-          rejectUnauthorized:env.bool('DATABASE_SSL_SELF', false),
+          ca: env('DATABASE_CA')
         },
       },
       debug: false,
     },
-  });*/
+  });
 
- const parse = require('pg-connection-string').parse;
+ /*const parse = require('pg-connection-string').parse;
   const config = parse(process.env.DATABASE_URL);
   
   module.exports = () => ({
