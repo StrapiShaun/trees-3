@@ -1,3 +1,10 @@
+const parse = require("pg-connection-string").parse;
+
+const { host, port, database, user, password } = parse(
+  process.env.DATABASE_URL
+);
+
+
 module.exports = ({ env }) => ({
     connection: {
       client: 'postgres',
@@ -8,7 +15,7 @@ module.exports = ({ env }) => ({
         user: env('DATABASE_USERNAME'), 
         password: env('DATABASE_PASSWORD'),
         ssl: {
-          ca: env('DATABASE_CA')
+          rejectUnauthorized: false,
         },
       },
       debug: false,
