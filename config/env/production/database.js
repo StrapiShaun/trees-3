@@ -1,4 +1,4 @@
-console.log(process.env.DATABASE_URL
+console.log(process.env.DATABASE_URL)
 
 //const parse = require('pg-connection-string').parse;
 //const config = parse(process.env.DATABASE_URL);
