@@ -1,5 +1,12 @@
 const parse = require('pg-connection-string').parse;
-const config = parse(process.env.DATABASE_URL);
+const config = () => {
+  if (process.env.DATABASE_URL) {
+    return parse(process.env.DATABASE_URL);
+  }
+  
+  return parse('postgresql://db:AVNS_Xa748KyNOJEW4fz@app-a37a0641-0264-4aaa-920c-a5b98ac8dbbd-do-user-2064451-0.b.db.ondigitalocean.com:25060/db?sslmode=require')
+}
+    
 
 console.log(config);
 
